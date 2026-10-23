@@ -57,7 +57,7 @@ export default function HowItWorksPage() {
       </div>
 
       <div className="grid grid-cols-[repeat(auto-fit,minmax(min(100%,300px),1fr))] items-start gap-[clamp(20px,3vw,44px)]">
-        <div className="flex flex-col gap-4">
+        <div id="faq" className="flex scroll-mt-24 flex-col gap-4">
           <h2 className="font-display text-[clamp(21px,2.5vw,30px)] font-bold tracking-[-0.03em]">
             Common questions
           </h2>

@@ -202,7 +202,7 @@ export default function HomePage() {
       </section>
 
       {/* Recent work */}
-      <section className="mx-auto max-w-[1400px] px-[clamp(16px,4vw,56px)] pb-[clamp(44px,6vw,96px)]">
+      <section id="work" className="scroll-mt-24 mx-auto max-w-[1400px] px-[clamp(16px,4vw,56px)] pb-[clamp(44px,6vw,96px)]">
         <div className="mb-[22px] flex flex-wrap items-end justify-between gap-4">
           <h2 className="font-display text-[clamp(23px,2.8vw,34px)] font-bold tracking-[-0.03em]">
             Recent work

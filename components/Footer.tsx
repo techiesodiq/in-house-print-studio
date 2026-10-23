@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { LogoMark } from "./Logo";
+import { SocialLinks } from "./SocialLinks";
 import { FOOTER_COLUMNS } from "@/lib/products";
 
 export function Footer() {
@@ -17,6 +19,7 @@ export function Footer() {
               Screen print and DTF, print-to-order, quoted per job. Local
               delivery by hand.
             </p>
+            <SocialLinks />
           </div>
           {FOOTER_COLUMNS.map((col) => (
             <div key={col.title} className="flex flex-col items-start gap-3">
@@ -24,12 +27,13 @@ export function Footer() {
                 {col.title}
               </span>
               {col.items.map((item) => (
-                <span
-                  key={item}
-                  className="text-[13.5px] leading-[1.6] text-ink"
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="text-[13.5px] leading-[1.6] text-ink underline-offset-4 transition-colors hover:text-acc-ink hover:underline"
                 >
-                  {item}
-                </span>
+                  {item.label}
+                </Link>
               ))}
             </div>
           ))}

@@ -162,8 +162,44 @@ export const ARTWORK_CHECKLIST = [
   "Transparent background where needed",
 ];
 
+export const CONTACT_EMAIL = "hello@inhouseprintstudios.com";
+
+export type SocialNetwork = "Instagram" | "Facebook" | "TikTok" | "X";
+
+// Placeholders: swap each href for the studio's real profile URL once the accounts exist.
+export const SOCIAL_LINKS: { network: SocialNetwork; href: string }[] = [
+  { network: "Instagram", href: "https://www.instagram.com" },
+  { network: "Facebook", href: "https://www.facebook.com" },
+  { network: "TikTok", href: "https://www.tiktok.com" },
+  { network: "X", href: "https://x.com" },
+];
+
 export const FOOTER_COLUMNS = [
-  { title: "Shop", items: ["Catalogue", "Tees", "Hoodies", "Caps & bags"] },
-  { title: "Studio", items: ["How it works", "Screen print", "DTF transfer", "Our work"] },
-  { title: "Contact", items: ["Request a quote", "hello@inhouseprintstudios.com", "Local delivery & pickup"] },
+  {
+    title: "Shop",
+    items: [
+      { label: "Catalogue", href: "/catalogue" },
+      { label: "Tees", href: "/catalogue?type=Tees" },
+      { label: "Hoodies", href: "/catalogue?type=Hoodies" },
+      { label: "Caps", href: "/catalogue?type=Caps" },
+      { label: "Bags", href: "/catalogue?type=Bags" },
+    ],
+  },
+  {
+    title: "Studio",
+    items: [
+      { label: "How it works", href: "/how-it-works" },
+      { label: "Screen print", href: "/catalogue?method=Screen" },
+      { label: "DTF transfer", href: "/catalogue?method=DTF" },
+      { label: "Our work", href: "/#work" },
+    ],
+  },
+  {
+    title: "Contact",
+    items: [
+      { label: "Request a quote", href: "/quote" },
+      { label: CONTACT_EMAIL, href: `mailto:${CONTACT_EMAIL}` },
+      { label: "Local delivery & pickup", href: "/how-it-works#faq" },
+    ],
+  },
 ];
